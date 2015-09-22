@@ -1,21 +1,25 @@
-<head>
-	<script src="jquery-2.1.4.min.js"></script>
-	<script>$(document).ready(
-
-		function(){
-			console.log("ready!");
-			$("#hello").click(function() {
-	
-				$.ajax({
-					url:"hello-world?name=Toto",
-					method:"GET",
-					success:function(data) {
-						$("#hello").html(data.content);
-					}
-				});
-	
-			});
-		}
-	);</script>
-</head>
-<div id="hello">Hello, Stranger2!</div>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="functions.js"></script>
+		<title>BliBli Blog</title>
+		<h1>BliBli Blog</h1>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><button onclick="diablo()">Diablo</button></li>
+					<li><button onclick="hearthstone()">Hearthstone</button></li>
+				</ul>
+			</nav>
+		</header>
+	<div id="hello">Hello, Stranger2!</div>
+	</body>
+	<footer>
+	<h5>Proudly powered by Lucile INCARDONA & Renaud LAMARQUE</h5>
+	</footer>
+</html>
