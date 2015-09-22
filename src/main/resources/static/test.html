@@ -1,0 +1,21 @@
+<head>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script>$(document).ready(
+
+		function(){
+			console.log("ready!");
+			$("#hello").click(function() {
+	
+				$.ajax({
+					url:"hello-world?name=Toto",
+					method:"GET",
+					success:function(data) {
+						$("#hello").html(data.content);
+					}
+				});
+	
+			});
+		}
+	);</script>
+</head>
+<div id="hello">Hello Stranger</div>
