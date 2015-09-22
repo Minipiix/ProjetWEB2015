@@ -1,15 +1,9 @@
 $(document).ready(
 	function(){
 		console.log("ready!");
-		$("#hello").click(function() {
-			$.ajax({
-			url:"hello-world?name=Toto",
-			method:"GET",
-				success:function(data) {
-					$("#hello").html(data.content);
-				}
-			});
-		});
+		$("#hello").click(hello);
+		$("#diabloButton").click(diablo);
+		$("#hearthstoneButton").click(hearthstone);
 	}
 );
 
@@ -20,3 +14,13 @@ function diablo(){
 function hearthstone(){
 		console.log("MDR HEARTHSTONE");
 	};
+	
+function hello(){
+	$.ajax({
+		url:"hello-world?name=Toto",
+		method:"GET",
+		success:function(data) {
+			$("#hello").html(data.content);
+		}
+	});
+};
