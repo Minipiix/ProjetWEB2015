@@ -74,7 +74,15 @@ function starcraft(){
 		success:function(data) {
 			$("#helloMessage").html(data.content);
 		}
-	});		
+	});
+	$.ajax({
+		url:"starcraft.html",
+		method:"GET",
+		success:function(data) {
+			$("#corpsSite").html(data);
+		}
+	});
+			
 };
 
 function wow(){
@@ -91,6 +99,13 @@ function wow(){
 		method:"GET",
 		success:function(data) {
 			$("#helloMessage").html(data.content);
+		}
+	});
+	$.ajax({
+		url:"wow.html",
+		method:"GET",
+		success:function(data) {
+			$("#corpsSite").html(data);
 		}
 	});		
 };
@@ -109,6 +124,13 @@ function herosOfTheStorm(){
 		method:"GET",
 		success:function(data) {
 			$("#helloMessage").html(data.content);
+		}
+	});
+	$.ajax({
+		url:"hots.html",
+		method:"GET",
+		success:function(data) {
+			$("#corpsSite").html(data);
 		}
 	});		
 };

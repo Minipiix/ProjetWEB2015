@@ -22,3 +22,13 @@ nav li
     display: inline-block;
     margin-right: 15px;
 }
+
+#corpsDiablo
+{
+	color: red;
+}
+
+#corpsHS
+{
+	color: green;
+}
