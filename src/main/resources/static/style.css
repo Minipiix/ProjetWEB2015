@@ -2,3 +2,23 @@ h1
 {
 	color: blue;
 }
+
+/* Navigation */
+
+nav
+{
+    display: inline-block;
+    width: 740px;
+    text-align: right;
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 15px;
+}
