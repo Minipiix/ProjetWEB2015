@@ -31,6 +31,13 @@ function diablo(){
 		success:function(data) {
 			$("#corpsSite").html(data);
 		}
+	});
+	$.ajax({
+		url:"injectStyle2.html",
+		method:"GET",
+		success:function(data) {
+			$("#style").html(data);
+		}
 	});			
 };
 	
@@ -107,7 +114,14 @@ function wow(){
 		success:function(data) {
 			$("#corpsSite").html(data);
 		}
-	});		
+	});	
+		$.ajax({
+		url:"injectStyle.html",
+		method:"GET",
+		success:function(data) {
+			$("#style").html(data);
+		}
+	});	
 };
 
 function herosOfTheStorm(){

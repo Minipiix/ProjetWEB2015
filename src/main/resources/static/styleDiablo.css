@@ -1,0 +1,97 @@
+
+/* Définition des polices personnalisées */
+/* Eléments principaux de la page */
+
+body
+{
+	background-color:red;
+	font-family: Metallophile, "Trebuchet MS", Helvetica, sans-serif;
+	color: #f7fae5;
+}
+
+#bloc_page
+{
+    width: 900px;
+    margin: auto;
+}
+
+section h1, footer h1, nav a
+{
+    font-family: "Metallophile", "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #e8e361;
+}
+
+h1
+{
+	background-image: -webkit-linear-gradient(top, #769944 0%, #769944 22.916667%, #9fb84a 37.5%, #e8e361 55%);
+	-webkit-background-clip: text;
+    background-size: 1.2em 1.2em;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Header */
+
+#titre
+{
+    display: inline-block;
+}
+
+header h1
+{
+    font-family: "Metallophile", "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+#logo, header h1
+{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+header h2
+{
+    font-family: "Metallophile", "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* Navigation */
+
+nav
+{
+    display: inline-block;
+    width: 740px;
+    text-align: right;
+    
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 15px;
+    background-image: -webkit-linear-gradient(top, #769944 0%, #769944 22.916667%, #9fb84a 37.5%, #e8e361 55%);
+	-webkit-background-clip: text;
+    background-size: 1.2em 1.2em;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contenu du site */
+
+#corpsDiablo
+{
+	color: red;
+}
+
+#corpsHS
+{
+	color: green;
+}
