@@ -1,2 +1,4 @@
-esiea\projetweb2015\Application.class
-esiea\projetweb2015\HelloController.class
+esiea\projetweb2015\HelloWorldController.class
+esiea\projetweb2015\Greeting.class
+esiea\projetweb2015\HelloWorldConfiguration.class
+esiea\projetweb2015\TitleController.class
