@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/title")
-public class TitleController {
-	private static final String template = "Toute l'actus de %s!";
+@RequestMapping("/article")
+public class ArticleController {
+
+	private static final String template = "Voici %s !";
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public @ResponseBody Title changeTitle(@RequestParam(value="name", required=false, defaultValue="Blizzard") String name){
-		return new Title(String.format(template, name));
+	public @ResponseBody Article changeTitle(@RequestParam(value="name", required=false, defaultValue="un article") String name){
+		return new Article(0,0,String.format(template, name));
 	}
 }
