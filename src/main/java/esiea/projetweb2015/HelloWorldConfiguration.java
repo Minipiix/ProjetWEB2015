@@ -23,8 +23,9 @@ public class HelloWorldConfiguration {
 	       	while(result.next()) {
 	       		int id  = result.getInt("ID");
 	       		int gameid = result.getInt("GAMEID");
-	       		String link = result.getString("ARTICLELINK");
-	       		System.out.println(id+"\t"+gameid+"\t"+link);
+	       		String title = result.getString("TITRE");
+	       		String article = result.getString("ARTICLE");
+	       		System.out.println(id+"\t"+gameid+"\t"+title+"\n"+article);
 	       	}
         } catch (SQLException e) {
         //traitement de l'exception

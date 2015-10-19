@@ -1,0 +1,9 @@
+2015-10-19 10:22:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TITLE" not found [42122-189]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3129)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3217)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:303)
+	at esiea.projetweb2015.HelloWorldConfiguration.main(HelloWorldConfiguration.java:26)
