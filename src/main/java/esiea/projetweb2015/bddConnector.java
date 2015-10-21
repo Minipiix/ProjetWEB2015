@@ -14,7 +14,7 @@ public class bddConnector{
 			e.printStackTrace();
 		}
 	
-	    String DBurl = "jdbc:h2:C:/Users/TheSh_000/git/ProjetWeb2015/src/main/resources/static/test";
+	    String DBurl = "jdbc:h2:./../ProjetWeb2015/src/main/resources/static/test";
 	    Connection con = DriverManager.getConnection(DBurl,"sa","");
 		return con;
 	    
