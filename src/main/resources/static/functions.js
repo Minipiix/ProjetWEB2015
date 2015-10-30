@@ -11,6 +11,7 @@ $(document).ready(
 );
 
 function blizzard(){
+	$("style").remove();
 	$.ajax({
 		url:"css/styleBlizzard.css",
 		success:function(data) {
@@ -21,6 +22,7 @@ function blizzard(){
 
 function diablo(){
 	console.log("MDR DIABLO");
+	$("style").remove();
 	$.ajax({
 		url:"title?name=Diablo",
 		method:"GET",
@@ -52,6 +54,7 @@ function diablo(){
 	
 function hearthstone(){
 	console.log("MDR HEARTHSTONE");
+	$("style").remove();
 	$.ajax({
 		url:"title?name=Hearthstone",
 		method:"GET",
@@ -84,6 +87,7 @@ function hearthstone(){
 
 function starcraft(){
 	console.log("MDR STARCRAFT");
+	$("style").remove();
 	$.ajax({
 		url:"title?name=Starcraft",
 		method:"GET",
@@ -116,6 +120,7 @@ function starcraft(){
 
 function wow(){
 	console.log("MDR WOW");
+	$("style").remove();
 	$.ajax({
 		url:"title?name=World Of Warcraft",
 		method:"GET",
@@ -147,6 +152,7 @@ function wow(){
 
 function herosOfTheStorm(){
 	console.log("MDR Heros Of The Storm");
+	$("style").remove();
 	$.ajax({
 		url:"title?name=Heros Of The Storm",
 		method:"GET",

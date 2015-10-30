@@ -1,0 +1,52 @@
+body{
+	background-color: rgb(241, 214, 169);
+	color: rgb(46, 46, 46);
+	font: 13px/1.5 'Open Sans', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN W3', Osaka, Meiryo, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+#titre h3{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 30px;
+    font-size: 1.9rem;
+	color: #66559e;
+}
+
+nav li{
+	display: inline-block;
+	margin-right: 15px;
+	color: #fcd144;
+    text-shadow: 0 0 10px #000, 0 0 10px #000;
+    font: normal 12px "Arial", sans-serif;
+    text-transform: uppercase;
+}
+
+article{
+	width: 65%;
+	margin-right: 15px;
+	margin-left: 15px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px #1c1a19;
+	background-color:#432100;
+	background-image: none;
+	padding: 0 40px 35px 40px;
+	font-size: 11px;
+	color: white;
+}
+
+aside{
+	position: relative;
+	width: 20%;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px #1c1a19;
+	background-color:#432100;
+	background-image: none;
+	padding: 0 40px 35px 40px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 11px;
+	color: white;
+}
+
+footer a{
+	color: #4a3c2c;
+	text-decoration: none;
+}

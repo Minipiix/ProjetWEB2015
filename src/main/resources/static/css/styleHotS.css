@@ -1,0 +1,53 @@
+body{
+	background: #000;
+	color: #a99877;
+	font: normal 13px/1.5 Arial, sans-serif;
+}
+
+#titre h3{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+	color: #CF590B;
+	text-shadow: none;
+}
+
+nav li{
+	display: inline-block;
+	margin-right: 15px;
+    font: normal 12px "Arial", sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 #000, 0 0 5px #000;
+    font-family: Metronic,"Myriad Pro",Myriad,Arial,sans-serif;
+    color: #fff;
+}
+
+article{
+	width: 65%;
+	margin-right: 15px;
+	margin-left: 15px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px #1c1a19;
+	background-color: #190625;
+	background-image: none;
+	padding: 0 40px 35px 40px;
+	font-size: 11px;
+	color: #a99877;
+}
+
+aside{
+	position: relative;
+	width: 20%;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px #1c1a19;
+	background-color: #190625;
+	background-image: none;
+	padding: 0 40px 35px 40px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 11px;
+	color: #a99877;
+}
+
+footer a{
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+}

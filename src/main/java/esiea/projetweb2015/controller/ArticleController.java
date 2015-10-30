@@ -21,7 +21,7 @@ public class ArticleController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public @ResponseBody Article changeTitle(@RequestParam(value="name", required=false, defaultValue="un article") String name){
-		return new Article(0,String.format(template, name), null, null, null);
+		return new Article(0,String.format(template, name),null , null, null);
 	}
 	
 	//TODO Afficher tous les Articles
