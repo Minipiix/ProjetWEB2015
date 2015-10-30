@@ -38,6 +38,15 @@ function diablo(){
 		}
 	});
 	$.ajax({
+		url:"article?game=0",
+		method:"GET",
+		success:function(data) {
+			$.each(data, function (index) {
+	            alert(data[index].content);
+            });
+		}
+	});
+	$.ajax({
 		url:"diablo.html",
 		method:"GET",
 		success:function(data) {

@@ -2,9 +2,9 @@ package esiea.projetweb2015.dao.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
-
-import javax.annotation.PostConstruct;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +15,7 @@ import org.springframework.stereotype.Repository;
 
 import esiea.projetweb2015.dao.ArticleDao;
 import esiea.projetweb2015.model.Article;
+import esiea.projetweb2015.model.GameId;
 
 @Repository
 public class ArticleDaoImpl implements ArticleDao {
@@ -28,22 +29,14 @@ public class ArticleDaoImpl implements ArticleDao {
 	// SELECT QUERY
 	private static final String GET_ALL_ARTICLES = "SELECT * FROM ARTICLE";
 	private static final String GET_GAME_ARTICLES = "SELECT * FROM ARTICLE WHERE gameId = ?";
-
-	private Integer idSequence;
 	
     @Autowired
     private JdbcTemplate jdbcTemplate;
     
-    @PostConstruct
-    private void initIdSequence () {
-    	idSequence = 1;
-    }
-    
 	@Override
-	public void saveArticle(Article article) {
-		log.info("insert article " + idSequence);
-		jdbcTemplate.update(SAVE_ARTICLE, idSequence, article.getGameId(), article.getContent(), article.getTitle(), article.getWritter(), article.getDate());
-		idSequence ++;
+	public void saveArticle(Integer id, GameId gameId, String content, String title, String writter, Date date) {
+		log.info("insert article " + id);
+		jdbcTemplate.update(SAVE_ARTICLE, id, gameId.getGameId(), content, title, writter, date);
 	}
 	
 	@Override
@@ -62,14 +55,14 @@ public class ArticleDaoImpl implements ArticleDao {
 	{
 		@Override
 		public Article mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Article article = new Article();
-			article.setId(rs.getInt("id"));
-			article.setGameId(rs.getInt("gameId"));
-			article.setContent(rs.getString("content"));
-			article.setTitle(rs.getString("title"));
-			article.setWritter(rs.getString("writter"));
-			article.setDate(rs.getDate("date"));
-			return article;
+			String content = rs.getString("content");
+			String title = rs.getString("title");
+			String writter = rs.getString("writter");
+			
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			String date = sdf.format(rs.getDate("date"));
+			
+			return new Article(content, title, writter, date);
 		}
 		
 	}

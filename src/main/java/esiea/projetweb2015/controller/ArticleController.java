@@ -1,5 +1,7 @@
 package esiea.projetweb2015.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,12 +18,10 @@ public class ArticleController {
 	
 	@Autowired
 	private ArticleDao articleDao;
-
-	private static final String template = "Voici %s !";
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public @ResponseBody Article changeTitle(@RequestParam(value="name", required=false, defaultValue="un article") String name){
-		return new Article(0,String.format(template, name),null , null, null);
+	public @ResponseBody List<Article> changeTitle(@RequestParam(value="game", required=true) Integer game){
+		return articleDao.getArticlesByGame(game);
 	}
 	
 	//TODO Afficher tous les Articles

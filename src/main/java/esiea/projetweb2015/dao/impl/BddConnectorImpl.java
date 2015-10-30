@@ -1,5 +1,10 @@
 package esiea.projetweb2015.dao.impl;
 
+import static esiea.projetweb2015.model.GameId.DIABLO;
+import static esiea.projetweb2015.model.GameId.HS;
+import static esiea.projetweb2015.model.GameId.SC;
+import static esiea.projetweb2015.model.GameId.WOW;
+
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -10,7 +15,6 @@ import org.springframework.stereotype.Repository;
 
 import esiea.projetweb2015.dao.ArticleDao;
 import esiea.projetweb2015.dao.BddConnector;
-import esiea.projetweb2015.model.Article;
 
 @Repository
 public class BddConnectorImpl implements BddConnector{
@@ -49,12 +53,12 @@ public class BddConnectorImpl implements BddConnector{
 	
     @Override
 	public void initDatabaseData() {
-    	articleDao.saveArticle(new Article(0, "Content test", "title", "moi", new Date()));
-    	articleDao.saveArticle(new Article(0, "Content test", "title", "moi", new Date()));
-    	articleDao.saveArticle(new Article(0, "Content test", "title", "moi", new Date()));
-    	articleDao.saveArticle(new Article(1, "Content test 1", "title", "moi", new Date()));
-    	articleDao.saveArticle(new Article(1, "Content test 2", "title", "moi", new Date()));
-    	articleDao.saveArticle(new Article(1, "Content test 3", "title", "moi", new Date()));
+    	articleDao.saveArticle(1, DIABLO, "Content test diablo 1 ", "title", "moi", new Date());
+    	articleDao.saveArticle(2, DIABLO, "Content test diablo 2 ", "title", "moi", new Date());
+    	articleDao.saveArticle(3, WOW, "Content test wow 1", "title", "moi", new Date());
+    	articleDao.saveArticle(4, WOW, "Content test wow 2 ", "title", "moi", new Date());
+    	articleDao.saveArticle(5, HS, "Content test hs", "title", "moi", new Date());
+    	articleDao.saveArticle(6, SC, "Content test sc", "title", "moi", new Date());
 	}
 	
 }

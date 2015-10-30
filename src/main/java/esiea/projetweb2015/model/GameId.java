@@ -8,12 +8,22 @@ public enum GameId {
 	SC(4);
 	
 	private int gameId;
+	
 	GameId(int gameId){
 		this.gameId=gameId;
 	}
 	
 	public int getGameId(){
 		return gameId;
+	}
+	
+	public static GameId getFromInt(int intId) {
+		for (GameId gameId : values()) {
+			if(gameId.getGameId() == intId) {
+				return gameId;
+			}
+		}
+		return null;
 	}
 
 }
