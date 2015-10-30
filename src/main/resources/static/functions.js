@@ -7,22 +7,44 @@ $(document).ready(
 		$("#wowButton").click(wow);
 		$("#herosOfTheStormButton").click(herosOfTheStorm);
 		$("#logo").click(blizzard);
+		$.ajax({
+			url:"article",
+			method:"GET",
+			success:function(data) {
+				$.each(data, function (index) {
+		            //alert(data[index].content);
+		            $("#articles").append(data[index].title + data[index].date + data[index].content + data[index].writter);
+	            });
+			}
+		});
 	}
 );
 
 function blizzard(){
 	$("style").remove();
+	$("#articles").empty();
 	$.ajax({
 		url:"css/styleBlizzard.css",
 		success:function(data) {
 			$("head").append("<style>" + data + "</style>");
 		}
-	});			
+	});	
+	$.ajax({
+		url:"article",
+		method:"GET",
+		success:function(data) {
+			$.each(data, function (index) {
+	            //alert(data[index].content);
+	            $("#articles").append(data[index].title + data[index].date + data[index].content + data[index].writter);
+            });
+		}
+	});		
 };
 
 function diablo(){
 	console.log("MDR DIABLO");
 	$("style").remove();
+	$("#articles").empty();
 	$.ajax({
 		url:"title?name=Diablo",
 		method:"GET",
@@ -42,15 +64,9 @@ function diablo(){
 		method:"GET",
 		success:function(data) {
 			$.each(data, function (index) {
-	            alert(data[index].content);
+	            //alert(data[index].content);
+	            $("#articles").append(data[index].title + data[index].date + data[index].content + data[index].writter);
             });
-		}
-	});
-	$.ajax({
-		url:"diablo.html",
-		method:"GET",
-		success:function(data) {
-			$("#corpsSite").html(data);
 		}
 	});
 	$.ajax({
@@ -64,6 +80,7 @@ function diablo(){
 function hearthstone(){
 	console.log("MDR HEARTHSTONE");
 	$("style").remove();
+	$("#articles").empty();
 	$.ajax({
 		url:"title?name=Hearthstone",
 		method:"GET",
@@ -79,10 +96,13 @@ function hearthstone(){
 		}
 	});
 	$.ajax({
-		url:"hearthstone.html",
+		url:"article?game=3",
 		method:"GET",
 		success:function(data) {
-			$("#corpsSite").html(data);
+			$.each(data, function (index) {
+	            //alert(data[index].content);
+	            $("#articles").append(data[index].title + data[index].date + data[index].content + data[index].writter);
+            });
 		}
 	});
 	$.ajax({
@@ -97,6 +117,7 @@ function hearthstone(){
 function starcraft(){
 	console.log("MDR STARCRAFT");
 	$("style").remove();
+	$("#articles").empty();
 	$.ajax({
 		url:"title?name=Starcraft",
 		method:"GET",
@@ -112,10 +133,13 @@ function starcraft(){
 		}
 	});
 	$.ajax({
-		url:"starcraft.html",
+		url:"article?game=4",
 		method:"GET",
 		success:function(data) {
-			$("#corpsSite").html(data);
+			$.each(data, function (index) {
+	            //alert(data[index].content);
+	            $("#articles").append(data[index].title + data[index].date + data[index].content + data[index].writter);
+            });
 		}
 	});
 	$.ajax({
@@ -130,6 +154,7 @@ function starcraft(){
 function wow(){
 	console.log("MDR WOW");
 	$("style").remove();
+	$("#articles").empty();
 	$.ajax({
 		url:"title?name=World Of Warcraft",
 		method:"GET",
@@ -145,10 +170,13 @@ function wow(){
 		}
 	});
 	$.ajax({
-		url:"wow.html",
+		url:"article?game=1",
 		method:"GET",
 		success:function(data) {
-			$("#corpsSite").html(data);
+			$.each(data, function (index) {
+	            //alert(data[index].content);
+	            $("#articles").append(data[index].title + data[index].date + data[index].content + data[index].writter);
+            });
 		}
 	});	
 	$.ajax({
@@ -162,6 +190,7 @@ function wow(){
 function herosOfTheStorm(){
 	console.log("MDR Heros Of The Storm");
 	$("style").remove();
+	$("#articles").empty();
 	$.ajax({
 		url:"title?name=Heros Of The Storm",
 		method:"GET",

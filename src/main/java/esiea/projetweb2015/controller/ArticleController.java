@@ -20,7 +20,10 @@ public class ArticleController {
 	private ArticleDao articleDao;
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public @ResponseBody List<Article> changeTitle(@RequestParam(value="game", required=true) Integer game){
+	public @ResponseBody List<Article> changeTitle(@RequestParam(value="game", required=false) Integer game){
+		if(game == null){
+			return articleDao.getAllArticles();
+		}
 		return articleDao.getArticlesByGame(game);
 	}
 	
