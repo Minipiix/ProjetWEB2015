@@ -12,9 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class HelloWorldConfiguration {
     
 	public static void main(String[] args) {
-        //SpringApplication.run(HelloWorldConfiguration.class, args);
+        SpringApplication.run(HelloWorldConfiguration.class, args);
         
-        ResultSet result = null;
+       /* ResultSet result = null;
         String requete = "SELECT * FROM BDD";
         try {
 	        Connection con = bddConnector.getConnection();
@@ -25,12 +25,12 @@ public class HelloWorldConfiguration {
 	       		int gameid = result.getInt("GAMEID");
 	       		String title = result.getString("TITRE");
 	       		String article = result.getString("ARTICLE");
-	       		System.out.println(id+"\t"+gameid+"\t"+title+"\n"+article);
+	       		//System.out.println(id+"\t"+gameid+"\t"+title+"\n"+article);
 	       	}
         } catch (SQLException e) {
         //traitement de l'exception
         	e.printStackTrace();
-        }
+        }*/
         
     }
 

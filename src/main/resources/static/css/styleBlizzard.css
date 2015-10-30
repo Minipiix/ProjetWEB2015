@@ -1,0 +1,120 @@
+/*Eléments principaux de la page*/
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	background-color: #010e16;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.frontpagecenter{
+	width: 100%;
+	min-width: 980px;
+}
+
+/* Header */
+
+.frontpageheader {
+	width: 100%;
+	z-index: 100;
+	min-width: 980px;
+	margin: 0 auto;
+}
+
+/* Navigation */
+
+.navigation{
+	position: relative;
+	width: 992px;
+	height: 132px;
+	z-index: 110;
+	margin: 0 auto;
+}
+
+.navigation .bar{
+	width: 762px;
+	height: 83px;
+	position: absolute;
+	top: 43px;
+	left: 217px;
+}
+
+.navigation .bar #diabloButton{
+	width: 152px;
+	background-position: 0px 0px;
+}
+
+.navigation .bar #hearthstoneButton{
+	width: 152px;
+	background-position: -152px 0px;
+}
+
+.navigation .bar #starcraftButton{
+	width: 152px;
+	background-position: -305px 0px;
+}
+
+.navigation .bar #wowButton{
+	width: 152px;
+	background-position: -457px 0px;
+}
+
+.navigation .bar #herosOfTheStormButton{
+	width: 152px;
+	background-position: -610px 0px;
+}
+
+.navigation .bar span{
+	color: #FFF;
+	position: absolute;
+	right: 12px;
+	bottom: 10px;
+	font-size: 13px;
+	font-family: MuseoSans-500,"Century Gothic";
+}
+
+nav{
+	display: inline-block;
+	//width: 740px;
+	text-align: right;
+}
+
+nav ul{
+	list-style-type: none;
+}
+
+nav li{
+	display: inline-block;
+	margin-right: 15px;
+}
+
+/*Corps*/
+
+article, aside{
+	display: inline-block;
+	vertical-align: top;
+	text-align: justify;
+}
+
+article{
+	width: 495px;
+	height: 325px;
+	position: absolute;
+	z-index: 120;
+	margin: -45px 0 0 0px;
+	padding: 7px 0 0 0;
+}
+
+aside{
+	width: 232px;
+	height: 273px;
+	position: absolute;
+	top: 21px;
+	left: 517px;
+	background-color: transparent;
+	display: block;
+}

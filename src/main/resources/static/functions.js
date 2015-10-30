@@ -6,8 +6,18 @@ $(document).ready(
 		$("#starcraftButton").click(starcraft);
 		$("#wowButton").click(wow);
 		$("#herosOfTheStormButton").click(herosOfTheStorm);
+		$("#logo").click(blizzard);
 	}
 );
+
+function blizzard(){
+	$.ajax({
+		url:"css/styleBlizzard.css",
+		success:function(data) {
+			$("head").append("<style>" + data + "</style>");
+		}
+	});			
+};
 
 function diablo(){
 	console.log("MDR DIABLO");
@@ -33,10 +43,9 @@ function diablo(){
 		}
 	});
 	$.ajax({
-		url:"injectStyle2.html",
-		method:"GET",
+		url:"css/styleDiablo.css",
 		success:function(data) {
-			$("#style").html(data);
+			$("head").append("<style>" + data + "</style>");
 		}
 	});			
 };
@@ -63,7 +72,14 @@ function hearthstone(){
 		success:function(data) {
 			$("#corpsSite").html(data);
 		}
-	});	
+	});
+	$.ajax({
+		url:"css/styleHS.css",
+		success:function(data) {
+			$("head").append("<style>" + data + "</style>");
+		}
+	});
+	
 };
 
 function starcraft(){
@@ -87,6 +103,12 @@ function starcraft(){
 		method:"GET",
 		success:function(data) {
 			$("#corpsSite").html(data);
+		}
+	});
+	$.ajax({
+		url:"css/styleSC.css",
+		success:function(data) {
+			$("head").append("<style>" + data + "</style>");
 		}
 	});
 			
@@ -115,13 +137,12 @@ function wow(){
 			$("#corpsSite").html(data);
 		}
 	});	
-		$.ajax({
-		url:"injectStyle.html",
-		method:"GET",
+	$.ajax({
+		url:"css/styleWow.css",
 		success:function(data) {
-			$("#style").html(data);
+			$("head").append("<style>" + data + "</style>");
 		}
-	});	
+	});
 };
 
 function herosOfTheStorm(){
@@ -145,6 +166,12 @@ function herosOfTheStorm(){
 		method:"GET",
 		success:function(data) {
 			$("#corpsSite").html(data);
+		}
+	});
+	$.ajax({
+		url:"css/styleHotS.css",
+		success:function(data) {
+			$("head").append("<style>" + data + "</style>");
 		}
 	});		
 };
