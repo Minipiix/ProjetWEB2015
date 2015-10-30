@@ -1,4 +1,4 @@
-package esiea.projetweb2015;
+package esiea.projetweb2015.model;
 
 public class Title {
 	
