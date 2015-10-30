@@ -11,75 +11,27 @@ body{
 	display: block;
 }
 
-.frontpagecenter{
+#bloc_page{
 	width: 100%;
 	min-width: 980px;
 }
 
 /* Header */
 
-.frontpageheader {
-	width: 100%;
-	z-index: 100;
-	min-width: 980px;
-	margin: 0 auto;
+#titre{
+	display: inline-block;
+}
+#titre h3{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+	color: #01b2f1;
 }
 
 /* Navigation */
 
-.navigation{
-	position: relative;
-	width: 992px;
-	height: 132px;
-	z-index: 110;
-	margin: 0 auto;
-}
-
-.navigation .bar{
-	width: 762px;
-	height: 83px;
-	position: absolute;
-	top: 43px;
-	left: 217px;
-}
-
-.navigation .bar #diabloButton{
-	width: 152px;
-	background-position: 0px 0px;
-}
-
-.navigation .bar #hearthstoneButton{
-	width: 152px;
-	background-position: -152px 0px;
-}
-
-.navigation .bar #starcraftButton{
-	width: 152px;
-	background-position: -305px 0px;
-}
-
-.navigation .bar #wowButton{
-	width: 152px;
-	background-position: -457px 0px;
-}
-
-.navigation .bar #herosOfTheStormButton{
-	width: 152px;
-	background-position: -610px 0px;
-}
-
-.navigation .bar span{
-	color: #FFF;
-	position: absolute;
-	right: 12px;
-	bottom: 10px;
-	font-size: 13px;
-	font-family: MuseoSans-500,"Century Gothic";
-}
-
 nav{
 	display: inline-block;
-	//width: 740px;
+	width: 50%;
 	text-align: right;
 }
 
@@ -90,6 +42,11 @@ nav ul{
 nav li{
 	display: inline-block;
 	margin-right: 15px;
+	color: #FFF;
+	font-size: 13px;
+	font-family: MuseoSans-500,"Century Gothic";
+	text-transform: none;
+    text-shadow: none;
 }
 
 /*Corps*/
@@ -101,20 +58,79 @@ article, aside{
 }
 
 article{
-	width: 495px;
-	height: 325px;
-	position: absolute;
-	z-index: 120;
-	margin: -45px 0 0 0px;
-	padding: 7px 0 0 0;
+	width: 65%;
+	margin-right: 15px;
+	margin-left: 15px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px #1c1a19;
+	background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+	padding: 0 40px 35px 40px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 11px;
+	color: #99cee0;
 }
 
 aside{
-	width: 232px;
-	height: 273px;
-	position: absolute;
-	top: 21px;
-	left: 517px;
-	background-color: transparent;
-	display: block;
+	position: relative;
+	width: 20%;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px #1c1a19;
+	background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+	padding: 0 40px 35px 40px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 11px;
+	color: #99cee0;
+}
+
+/* Footer */
+
+footer p, footer ul
+{
+	font-size: 0.8em;
+}
+
+footer h1
+{
+	font-size: 1.1em;
+}
+
+footer h5{
+	text-align: center;
+}
+
+#siteDiablo, #siteBlizzard, #siteHotS, #siteHS, #siteSC, #siteWow
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#siteDiablo{
+	width: 16%;
+}
+#siteBlizzard{
+	width: 16%;
+}
+#siteHotS{
+	width: 16%;
+}
+
+#siteHS{
+	width: 16%;
+}
+#siteSC{
+	width: 16%;
+}
+#siteWow{
+	width: 16%;
+}
+
+footer a{
+	color: #01b2f1;
+	text-decoration: none;
+}
+
+footer ul{
+	list-style-type: none;
 }

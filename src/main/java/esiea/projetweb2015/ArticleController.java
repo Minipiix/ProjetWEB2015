@@ -16,5 +16,8 @@ public class ArticleController {
 	public @ResponseBody Article changeTitle(@RequestParam(value="name", required=false, defaultValue="un article") String name){
 		return new Article(0,0,String.format(template, name), null, null, null);
 	}
+	
+	//TODO Afficher tous les Articles
+	//TODO Afficher les articles selectionnés
 
 }
