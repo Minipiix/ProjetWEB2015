@@ -29,6 +29,7 @@ public class ArticleDaoImpl implements ArticleDao {
 	// SELECT QUERY
 	private static final String GET_ALL_ARTICLES = "SELECT * FROM ARTICLE";
 	private static final String GET_GAME_ARTICLES = "SELECT * FROM ARTICLE WHERE gameId = ?";
+	private static final String GET_LAST_ARTICLE = "SELECT * FROM ARTICLE WHERE date =(SELECT MAX(date) FROM ARTICLE)";
 	
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -48,6 +49,12 @@ public class ArticleDaoImpl implements ArticleDao {
 	@Override
 	public List<Article> getArticlesByGame(Integer gameId) {
 		List<Article> articles = jdbcTemplate.query(GET_GAME_ARTICLES, new Object[]{gameId}, new ArticleRowMapper());
+		return articles;
+	}
+	
+	@Override
+	public List<Article> getLastArticle(){
+		List<Article> articles = jdbcTemplate.query(GET_LAST_ARTICLE, new ArticleRowMapper());
 		return articles;
 	}
 	

@@ -17,6 +17,16 @@ $(document).ready(
 	            });
 			}
 		});
+		$.ajax({
+			url:"last-article",
+			method:"GET",
+			success:function(data) {
+				$.each(data, function (index) {
+		            //alert(data[index].content);
+		            $("#dernier_article").append(data[index].title + data[index].date + data[index].content + data[index].writter);
+	            });
+			}
+		});
 	}
 );
 

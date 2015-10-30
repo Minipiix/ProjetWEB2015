@@ -14,5 +14,7 @@ public interface ArticleDao{
 	List<Article> getAllArticles();
 	
 	List<Article> getArticlesByGame(Integer gameId);
+	
+	List<Article> getLastArticle();
 
 }
